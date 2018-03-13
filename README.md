@@ -1,0 +1,2 @@
+# HeuSZJYJD
+The wxapp for HEU_National_Base_For_College_Students_Cultural_Quality_Education
