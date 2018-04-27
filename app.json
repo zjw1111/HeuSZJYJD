@@ -1,11 +1,28 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/index/index",
+    "pages/about/about"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "投票Demo",
+    "navigationBarTitleText": "哈工程现场投票",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "投票",
+        "iconPath": "image/index2.png",
+        "selectedIconPath": "image/index.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "image/about2.png",
+        "selectedIconPath": "image/about.png"
+      }
+    ]
   }
 }

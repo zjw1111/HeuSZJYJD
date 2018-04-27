@@ -36,6 +36,7 @@ Page({
       query.selectViewport().scrollOffset()
       query.exec(function (res) {
         console.log(parseInt(res[0].height));
+        console.log(res[0]);
         that.setData({
           height: res[0].height * 750 / res[0].width
         })

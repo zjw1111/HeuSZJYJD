@@ -9,7 +9,7 @@
 }
 .layout-top{
     width: 100%;
-    margin-bottom: 30rpx;
+    margin-bottom: 1.5rem;
 }
 .layout-bottom{
     width: 100%;
@@ -17,10 +17,10 @@
 .screen {
     text-align: right;
     width: 100%;
-    line-height: 150rpx;
+    line-height: 4rem;
     padding: 0 10rpx;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 3.5rem;
     box-sizing: border-box;
     border-top: 1px solid #fff;
 }

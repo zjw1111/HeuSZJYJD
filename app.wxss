@@ -1,10 +1,52 @@
 /**app.wxss**/
+
 .container {
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
+  padding: 170rpx 0 100rpx 0;
   box-sizing: border-box;
-} 
+}
+
+.btn-area {
+  padding: 20rpx 10rpx;
+  display: inline-block;
+}
+
+.btn-area button {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  padding: 10rpx 20rpx 12rpx;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 2;
+  -moz-border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+  -moz-box-shadow: 0 2rpx 6rpx #999;
+  -webkit-box-shadow: 0 rpx 6rpx #999;
+  text-shadow: 0 -2rpx 2rpx #222;
+  border-bottom: 2rpx solid #222;
+  position: relative;
+  cursor: pointer;
+}
+
+.awesome {
+  display: inline-block;
+  padding: 10rpx 20rpx 6px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  -moz-border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+  -moz-box-shadow: 0 1px 3px #999;
+  -webkit-box-shadow: 0 1px 3px #999;
+  text-shadow: 0 -1px 1px #222;
+  border-bottom: 1px solid #222;
+  position: relative;
+  cursor: pointer;
+}

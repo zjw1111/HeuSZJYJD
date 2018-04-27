@@ -42,7 +42,7 @@
   <view class="tz" data-id="{{index}}">编号</view>
   <view class="td" data-id="{{index}}">名称</view>
 </view> 
-<scroll-view scroll-y="true" style="height: {{height - 710}}rpx;">
+<scroll-view scroll-y="true" style="height: {{height - 700}}rpx;">
   <block wx:for="{{listData}}">
       <view class="tr">
         <view class="tz" data-id="{{index}}">{{item.id1}}</view>
