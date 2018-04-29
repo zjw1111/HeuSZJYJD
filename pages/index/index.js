@@ -82,7 +82,7 @@ Page({
       console.log(temp);
       var map = new Object();
       for (var i = 0; i < res.length; i++) {
-        map[res[i].attributes.id] = res[i].attributes.obj_id;
+        map[res[i].attributes.id] = res[i].id;
       }
       that.setData({
         listData: temp,
@@ -169,7 +169,7 @@ Page({
           });
           wx.showModal({
             title: '投票失败',
-            content: '输入错误或网络繁忙，请重试！',
+            content: '编号输入错误或网络繁忙，请重试！',
             showCancel: false,
           })
         });
