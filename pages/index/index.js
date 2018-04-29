@@ -48,48 +48,48 @@ Page({
       })
     }, 800)
 
-    new AV.Query('available')
-      .ascending('id')
-      .equalTo('available', true)
-      .limit(50)
-      .find()
-      .then(res => {
-        var temp = [];
-        for (var i = 0; i < res.length / 3; i++) {
-          if (i * 3 + 2 < res.length) {
-            temp.push({
-              id1: res[i * 3].attributes.id,
-              name1: res[i * 3].attributes.name,
-              id2: res[i * 3 + 1].attributes.id,
-              name2: res[i * 3 + 1].attributes.name,
-              id3: res[i * 3 + 2].attributes.id,
-              name3: res[i * 3 + 2].attributes.name
-            })
-          } else if (i * 3 + 1 < res.length) {
-            temp.push({
-              id1: res[i * 3].attributes.id,
-              name1: res[i * 3].attributes.name,
-              id2: res[i * 3 + 1].attributes.id,
-              name2: res[i * 3 + 1].attributes.name
-            })
-          } else {
-            temp.push({
-              id1: res[i * 3].attributes.id,
-              name1: res[i * 3].attributes.name
-            })
-          }
+    var cql = 'select * from TOUPIAO where id in (select id from available where available=true) order by id';
+    AV.Query.doCloudQuery(cql).then(function (data) {
+      // results 即为查询结果，它是一个 AV.Object 数组
+      var res = data.results;
+      console.log(res)
+
+      var temp = [];
+      for (var i = 0; i < res.length / 3; i++) {
+        if (i * 3 + 2 < res.length) {
+          temp.push({
+            id1: res[i * 3].attributes.id,
+            name1: res[i * 3].attributes.name,
+            id2: res[i * 3 + 1].attributes.id,
+            name2: res[i * 3 + 1].attributes.name,
+            id3: res[i * 3 + 2].attributes.id,
+            name3: res[i * 3 + 2].attributes.name
+          })
+        } else if (i * 3 + 1 < res.length) {
+          temp.push({
+            id1: res[i * 3].attributes.id,
+            name1: res[i * 3].attributes.name,
+            id2: res[i * 3 + 1].attributes.id,
+            name2: res[i * 3 + 1].attributes.name
+          })
+        } else {
+          temp.push({
+            id1: res[i * 3].attributes.id,
+            name1: res[i * 3].attributes.name
+          })
         }
-        console.log(temp);
-        var map = new Object();
-        for (var i = 0; i < res.length; i++) {
-          map[res[i].attributes.id] = res[i].attributes.obj_id;
-        }
-        this.setData({
-          listData: temp,
-          map: map
-        })
+      }
+      console.log(temp);
+      var map = new Object();
+      for (var i = 0; i < res.length; i++) {
+        map[res[i].attributes.id] = res[i].attributes.obj_id;
+      }
+      that.setData({
+        listData: temp,
+        map: map
       })
-      .catch(console.error);
+    }, function (error) {
+    });
   },
   onShow:function(){
     // 页面显示
