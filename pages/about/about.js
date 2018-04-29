@@ -10,11 +10,14 @@ Page({
   },
 
   btntap: function () {
-    wx.showModal({
-      title: '重要说明',
-      content: '本程序目前为测试版本，需配合对应的前端页面才能使用。若有需求请联系admin@zjw1.top',
-      showCancel: false,
+    wx.navigateTo({
+      url: '../help/help',
     })
+    // wx.showModal({
+    //   title: '重要说明',
+    //   content: '本程序目前为测试版本，需配合对应的前端页面才能使用。若有需求请联系admin@zjw1.top',
+    //   showCancel: false,
+    // })
   },
   
   onLoad: function () {

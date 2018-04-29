@@ -1,4 +1,5 @@
 /**app.wxss**/
+@import "/wxParser/index.wxss";
 
 .container {
   height: 100%;

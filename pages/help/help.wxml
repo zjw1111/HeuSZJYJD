@@ -1,0 +1,8 @@
+<import src="../../wxParser/index.wxml" />
+
+<button type="primary" bindtap="btntap">返回</button>
+<view class="wxParser" style="padding: 1rem 1rem;">
+  <view class="title" style="padding: 0.3rem 0;">{{title}}</view>
+  <template is="wxParser" data="{{wxParserData:richText.nodes}}" />
+</view>
+<button type="primary" bindtap="btntap">返回</button>
